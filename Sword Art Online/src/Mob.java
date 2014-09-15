@@ -6,16 +6,6 @@ public class Mob
 	private int mobAttack;
 	private int mobDef;
 	private int mobSpeed;
-	public Mob(String mobName, int mobHP, int mobAttack, int mobDef,
-			int mobSpeed)
-		{
-		super();
-		this.mobName = mobName;
-		this.mobHP = mobHP;
-		this.mobAttack = mobAttack;
-		this.mobDef = mobDef;
-		this.mobSpeed = mobSpeed;
-		}
 	public String getMobName()
 		{
 		return mobName;
