@@ -1,22 +1,32 @@
 
 public class Player
 	{
+	AttackBehavior heroAttackBehavior;
 	private String name;
 	private int playerHP;
 	private int playerVit;
 	private int playerStr;
 	private int playerDxt;
-	private int playerInt;
-	public Player(String name, int playerHP, int playerVit, int playerStr,
+	private static int playerInt;
+	public Player(AttackBehavior heroAttackBehavior, String name, int playerHP, int playerVit, int playerStr,
 			int playerDxt, int playerInt)
 		{
 		super();
+		this.heroAttackBehavior = heroAttackBehavior;
 		this.name = name;
 		this.playerHP = playerHP;
 		this.playerVit = playerVit;
 		this.playerStr = playerStr;
 		this.playerDxt = playerDxt;
 		this.playerInt = playerInt;
+		}
+	public AttackBehavior getHeroAttackBehavior()
+		{
+		return heroAttackBehavior;
+		}
+	public void setHeroAttackBehavior(AttackBehavior heroAttackBehavior)
+		{
+		this.heroAttackBehavior = heroAttackBehavior;
 		}
 	public String getName()
 		{
@@ -58,7 +68,7 @@ public class Player
 		{
 		this.playerDxt = playerDxt;
 		}
-	public int getPlayerInt()
+	public static int getPlayerInt()
 		{
 		return playerInt;
 		}
