@@ -2,24 +2,13 @@
 public class Player
 	{
 	AttackBehavior heroAttackBehavior;
-	private String name;
-	private int playerHP;
-	private int playerVit;
-	private int playerStr;
-	private int playerDxt;
+	private static String name;
+	private static int playerHP;
+	private static int playerVit;
+	private static int playerStr;
+	private static int playerDxt;
 	private static int playerInt;
-	public Player(AttackBehavior heroAttackBehavior, String name, int playerHP, int playerVit, int playerStr,
-			int playerDxt, int playerInt)
-		{
-		super();
-		this.heroAttackBehavior = heroAttackBehavior;
-		this.name = name;
-		this.playerHP = playerHP;
-		this.playerVit = playerVit;
-		this.playerStr = playerStr;
-		this.playerDxt = playerDxt;
-		this.playerInt = playerInt;
-		}
+
 	public AttackBehavior getHeroAttackBehavior()
 		{
 		return heroAttackBehavior;
@@ -28,7 +17,7 @@ public class Player
 		{
 		this.heroAttackBehavior = heroAttackBehavior;
 		}
-	public String getName()
+	public static String getName()
 		{
 		return name;
 		}
@@ -36,7 +25,7 @@ public class Player
 		{
 		this.name = name;
 		}
-	public int getPlayerHP()
+	public static int getPlayerHP()
 		{
 		return playerHP;
 		}
@@ -44,7 +33,7 @@ public class Player
 		{
 		this.playerHP = playerHP;
 		}
-	public int getPlayerVit()
+	public static int getPlayerVit()
 		{
 		return playerVit;
 		}
@@ -52,7 +41,7 @@ public class Player
 		{
 		this.playerVit = playerVit;
 		}
-	public int getPlayerStr()
+	public static int getPlayerStr()
 		{
 		return playerStr;
 		}
@@ -60,7 +49,7 @@ public class Player
 		{
 		this.playerStr = playerStr;
 		}
-	public int getPlayerDxt()
+	public static int getPlayerDxt()
 		{
 		return playerDxt;
 		}

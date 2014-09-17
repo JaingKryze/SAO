@@ -1,12 +1,13 @@
 
 public class PlayerSlashAttack implements AttackBehavior
 	{
-	public int attack ()
+	private int damageValue = 0;
+	public int attack()
 		{
 		int critMult = 1;
 		int roll = (int) (Math.random()*5);
-		int critChanceRoll = (int) (Math.random()*100);
-		if ((critChanceRoll*Player.getPlayerInt())/100 >= 1)
+		int critChanceRoll = (int) (Math.random()*100)+1;
+		if ((critChanceRoll <= Player.getPlayerInt()))
 			{
 			critMult = 2;
 			}
@@ -14,7 +15,7 @@ public class PlayerSlashAttack implements AttackBehavior
 			{
 			critMult = 1;
 			}
-		damage = damage + (1*Player.getPlayerStr())
-		return damage;
+		damageValue = (1*Player.getPlayerStr()*critMult+roll);
+		return damageValue;
 		}
 	}

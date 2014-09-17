@@ -11,7 +11,7 @@ public class CreatePlayer
 	static boolean checkStatIn;
 	public static Player createPlayer()
 		{
-		Player player = new Player(setName, setDxtOfPlayer, setDxtOfPlayer, setDxtOfPlayer, setDxtOfPlayer, setDxtOfPlayer);
+		Player player = new Player();
 		setStats(player);
 		return player;
 		}

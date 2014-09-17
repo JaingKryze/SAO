@@ -1,7 +1,7 @@
 
 public interface AttackBehavior
 	{
-	int damage = 0;
-	
+	public static int damage = 0;
+	//can not use private in a interface
 	public int attack();
 	}

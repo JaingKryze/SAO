@@ -1,12 +1,21 @@
 
 public class Mob
 	{
-	private String mobName;
-	private int mobHP;
-	private int mobAttack;
-	private int mobDef;
-	private int mobSpeed;
-	public String getMobName()
+	AttackBehavior mobAttackBehavior;
+	private static String mobName;
+	private static int mobHP;
+	private static int mobAttack;
+	private static int mobDef;
+	private static int mobSpeed;
+	public AttackBehavior getMobAttackBehavior()
+		{
+		return mobAttackBehavior;
+		}
+	public void setMobAttackBehavior(AttackBehavior mobAttackBehavior)
+		{
+		this.mobAttackBehavior = mobAttackBehavior;
+		}
+	public static String getMobName()
 		{
 		return mobName;
 		}
@@ -14,7 +23,7 @@ public class Mob
 		{
 		this.mobName = mobName;
 		}
-	public int getMobHP()
+	public static int getMobHP()
 		{
 		return mobHP;
 		}
@@ -22,7 +31,7 @@ public class Mob
 		{
 		this.mobHP = mobHP;
 		}
-	public int getMobAttack()
+	public static int getMobAttack()
 		{
 		return mobAttack;
 		}
@@ -30,7 +39,7 @@ public class Mob
 		{
 		this.mobAttack = mobAttack;
 		}
-	public int getMobDef()
+	public static int getMobDef()
 		{
 		return mobDef;
 		}
@@ -38,7 +47,7 @@ public class Mob
 		{
 		this.mobDef = mobDef;
 		}
-	public int getMobSpeed()
+	public static int getMobSpeed()
 		{
 		return mobSpeed;
 		}
