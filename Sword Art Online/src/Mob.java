@@ -55,5 +55,8 @@ public class Mob
 		{
 		this.mobSpeed = mobSpeed;
 		}
-	
+	public int performAttack()
+		{
+		return mobAttackBehavior.attack();
+		}
 	}

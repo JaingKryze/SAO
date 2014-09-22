@@ -1,15 +1,20 @@
+import java.util.*;
 
 public class Locations
 	{
-	Mob mobInRoom;
-	//this will create a room
-	public static void createRoom()
+	
+	Mob currentMob;
+	private String floor;
+	public Locations (String f)
 		{
-		spawnMobs();
+		floor = f;
 		}
-	//this will spawn Mobs according to the players level
-	public static void spawnMobs()
+	public Mob getCurrentMob()
 		{
-		
+		return currentMob;
+		}
+	public String getFloor()
+		{
+		return floor;
 		}
 	}

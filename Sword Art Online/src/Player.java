@@ -1,7 +1,7 @@
 
 public class Player
 	{
-	AttackBehavior heroAttackBehavior;
+	AttackBehavior playerAttackBehavior;
 	private static String name;
 	private static int playerHP;
 	private static int playerVit;
@@ -9,13 +9,13 @@ public class Player
 	private static int playerDxt;
 	private static int playerInt;
 
-	public AttackBehavior getHeroAttackBehavior()
+	public AttackBehavior getPlayerAttackBehavior()
 		{
-		return heroAttackBehavior;
+		return playerAttackBehavior;
 		}
-	public void setHeroAttackBehavior(AttackBehavior heroAttackBehavior)
+	public void setPlayerAttackBehavior(AttackBehavior playerAttackBehavior)
 		{
-		this.heroAttackBehavior = heroAttackBehavior;
+		this.playerAttackBehavior = playerAttackBehavior;
 		}
 	public static String getName()
 		{
@@ -64,5 +64,9 @@ public class Player
 	public void setPlayerInt(int playerInt)
 		{
 		this.playerInt = playerInt;
+		}
+	public int performAttack()
+		{
+		return playerAttackBehavior.attack();
 		}
 	}
