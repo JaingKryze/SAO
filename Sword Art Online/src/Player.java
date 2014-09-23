@@ -8,7 +8,33 @@ public class Player
 	private static int playerStr;
 	private static int playerDxt;
 	private static int playerInt;
-
+	private static int playerXp;
+	private static int playerLevel;
+	private static int playerXpNeeded;
+	public static int getPlayerXp()
+		{
+		return playerXp;
+		}
+	public void setPlayerXp(int playerXp)
+		{
+		this.playerXp = playerXp;
+		}
+	public static int getPlayerLevel()
+		{
+		return playerLevel;
+		}
+	public void setPlayerLevel(int playerLevel)
+		{
+		this.playerLevel = playerLevel;
+		}
+	public static int getPlayerXpNeeded()
+		{
+		return playerXpNeeded;
+		}
+	public void setPlayerXpNeeded(int playerXpNeeded)
+		{
+		this.playerXpNeeded = playerXpNeeded;
+		}
 	public AttackBehavior getPlayerAttackBehavior()
 		{
 		return playerAttackBehavior;

@@ -7,6 +7,15 @@ public class Mob
 	private static int mobAttack;
 	private static int mobDef;
 	private static int mobSpeed;
+	private static int mobXp;
+	public static int getMobXp()
+		{
+		return mobXp;
+		}
+	public void setMobXp(int mobXp)
+		{
+		this.mobXp = mobXp;
+		}
 	public AttackBehavior getMobAttackBehavior()
 		{
 		return mobAttackBehavior;

@@ -1,27 +1,19 @@
-import java.util.*;
-public class CreatePlayer
+import java.util.Scanner;
+
+
+public class LevelUp
 	{
-	static String setName;
-	static int setHPOfPlayer;
-	static int setVitOfPlayer = 1;
-	static int setStrOfPlayer = 1;
-	static int setDxtOfPlayer = 1;
-	static int setIntOfPlayer = 1;
-	static int totalOfStats = 8;
-	static boolean checkStatIn;
-	public static Player createPlayer()
+	
+	private static int setHPOfPlayer;
+	private static int setVitOfPlayer = Player.getPlayerVit();
+	private static int setStrOfPlayer = Player.getPlayerStr();
+	private static int setDxtOfPlayer = Player.getPlayerDxt();
+	private static int setIntOfPlayer = Player.getPlayerInt();
+	private static int totalOfStats = 3;
+	private static boolean checkStatIn;
+	private static Player player = PlayGame.player;
+	public static void assignStats()
 		{
-		Player player = new Player();
-		setStats(player);
-		return player;
-		}
-	public static void setStats(Player player)
-		{
-		System.out.println("Name your character");
-		Scanner name = new Scanner(System.in);
-		setName = name.nextLine();
-		player.setName(setName);
-		System.out.println("You start with 8 stat points. You can put them into Vit (health), Str(attack power), Dxt(speed), and Int(crit. hit chance).");
 		checkStatIn = true;
 		do
 			{
@@ -100,8 +92,5 @@ public class CreatePlayer
 		while(checkStatIn == false);
 		setHPOfPlayer = setVitOfPlayer*50;
 		player.setPlayerHP(setHPOfPlayer);
-		player.setPlayerLevel(1);
-		player.setPlayerXp(0);
-		player.setPlayerXpNeeded(100);
 		}
 	}
