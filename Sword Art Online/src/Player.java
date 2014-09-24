@@ -2,16 +2,16 @@
 public class Player
 	{
 	AttackBehavior playerAttackBehavior;
-	private static String name;
-	private static int playerHP;
-	private static int playerVit;
-	private static int playerStr;
-	private static int playerDxt;
-	private static int playerInt;
-	private static int playerXp;
-	private static int playerLevel;
-	private static int playerXpNeeded;
-	public static int getPlayerXp()
+	private  String name;
+	private  int playerHP;
+	private  int playerVit;
+	private  int playerStr;
+	private  int playerDxt;
+	private  int playerInt;
+	private  int playerXp;
+	private  int playerLevel;
+	private  int playerXpNeeded;
+	public  int getPlayerXp()
 		{
 		return playerXp;
 		}
@@ -19,7 +19,7 @@ public class Player
 		{
 		this.playerXp = playerXp;
 		}
-	public static int getPlayerLevel()
+	public  int getPlayerLevel()
 		{
 		return playerLevel;
 		}
@@ -27,7 +27,7 @@ public class Player
 		{
 		this.playerLevel = playerLevel;
 		}
-	public static int getPlayerXpNeeded()
+	public  int getPlayerXpNeeded()
 		{
 		return playerXpNeeded;
 		}
@@ -43,7 +43,7 @@ public class Player
 		{
 		this.playerAttackBehavior = playerAttackBehavior;
 		}
-	public static String getName()
+	public  String getName()
 		{
 		return name;
 		}
@@ -51,7 +51,7 @@ public class Player
 		{
 		this.name = name;
 		}
-	public static int getPlayerHP()
+	public  int getPlayerHP()
 		{
 		return playerHP;
 		}
@@ -59,7 +59,7 @@ public class Player
 		{
 		this.playerHP = playerHP;
 		}
-	public static int getPlayerVit()
+	public  int getPlayerVit()
 		{
 		return playerVit;
 		}
@@ -67,7 +67,7 @@ public class Player
 		{
 		this.playerVit = playerVit;
 		}
-	public static int getPlayerStr()
+	public  int getPlayerStr()
 		{
 		return playerStr;
 		}
@@ -75,7 +75,7 @@ public class Player
 		{
 		this.playerStr = playerStr;
 		}
-	public static int getPlayerDxt()
+	public  int getPlayerDxt()
 		{
 		return playerDxt;
 		}
@@ -83,7 +83,7 @@ public class Player
 		{
 		this.playerDxt = playerDxt;
 		}
-	public static int getPlayerInt()
+	public  int getPlayerInt()
 		{
 		return playerInt;
 		}

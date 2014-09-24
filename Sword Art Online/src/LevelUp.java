@@ -3,21 +3,20 @@ import java.util.Scanner;
 
 public class LevelUp
 	{
-	
+	private static Player player = PlayGame.player;
 	private static int setHPOfPlayer;
-	private static int setVitOfPlayer = Player.getPlayerVit();
-	private static int setStrOfPlayer = Player.getPlayerStr();
-	private static int setDxtOfPlayer = Player.getPlayerDxt();
-	private static int setIntOfPlayer = Player.getPlayerInt();
+	private static int setVitOfPlayer = player.getPlayerVit();
+	private static int setStrOfPlayer = player.getPlayerStr();
+	private static int setDxtOfPlayer = player.getPlayerDxt();
+	private static int setIntOfPlayer = player.getPlayerInt();
 	private static int totalOfStats = 3;
 	private static boolean checkStatIn;
-	private static Player player = PlayGame.player;
 	public static void assignStats()
 		{
 		checkStatIn = true;
 		do
 			{
-			System.out.println("How many points do you want in Vit");
+			System.out.println("How many points do you want in Vit?");
 			Scanner setVit = new Scanner(System.in);
 			setVitOfPlayer = setVit.nextInt();
 			if (setVitOfPlayer <= totalOfStats)
@@ -28,7 +27,7 @@ public class LevelUp
 				}
 			else
 				{
-				System.out.println("Pick a number less than " + totalOfStats);
+				System.out.println("Pick a number less than or equal to " + totalOfStats + ".");
 				checkStatIn = false;
 				}
 			}
@@ -36,7 +35,7 @@ public class LevelUp
 		checkStatIn = true;
 		do
 			{
-			System.out.println("How many points do you want in Str");
+			System.out.println("How many points do you want in Str?");
 			Scanner setStr = new Scanner(System.in);
 			setStrOfPlayer = setStr.nextInt();
 			if (setStrOfPlayer <= totalOfStats)
@@ -47,7 +46,7 @@ public class LevelUp
 				}
 			else
 				{
-				System.out.println("Pick a number less than " + totalOfStats);
+				System.out.println("Pick a number less than or equal to " + totalOfStats + ".");
 				checkStatIn = false;
 				}
 			}
@@ -55,7 +54,7 @@ public class LevelUp
 		checkStatIn = true;
 		do
 			{
-			System.out.println("How many points do you want in Dxt");
+			System.out.println("How many points do you want in Dxt?");
 			Scanner setDxt = new Scanner(System.in);
 			setDxtOfPlayer = setDxt.nextInt();
 			if (setDxtOfPlayer <= totalOfStats)
@@ -66,7 +65,7 @@ public class LevelUp
 				}
 			else
 				{
-				System.out.println("Pick a number less than " + totalOfStats);
+				System.out.println("Pick a number less than or equal to " + totalOfStats + ".");
 				checkStatIn = false;
 				}
 			}

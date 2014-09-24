@@ -5,10 +5,10 @@ public class Skeleton extends Mob
 		{
 		setMobXp(20);
 		mobAttackBehavior = (AttackBehavior) new MobStandardAttack();
-		setMobName("Slime");
-		setMobHP(10);
-		setMobAttack(1);
+		setMobName("Skeleton");
+		setMobHP(50);
+		setMobAttack(23);
 		setMobDef(1);
-		setMobSpeed(1);
+		setMobSpeed(3);
 		}
 	}

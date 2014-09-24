@@ -17,15 +17,15 @@ public class CreatePlayer
 		}
 	public static void setStats(Player player)
 		{
-		System.out.println("Name your character");
+		System.out.println("Name your character.");
 		Scanner name = new Scanner(System.in);
 		setName = name.nextLine();
 		player.setName(setName);
-		System.out.println("You start with 8 stat points. You can put them into Vit (health), Str(attack power), Dxt(speed), and Int(crit. hit chance).");
+		System.out.println("You start with 8 stat points. You can put them into Vit (health), Str(attack power), Dxt(speed), and Int(critical hit chance).");
 		checkStatIn = true;
 		do
 			{
-			System.out.println("How many points do you want in Vit");
+			System.out.println("How many points do you want in Vit?");
 			Scanner setVit = new Scanner(System.in);
 			setVitOfPlayer = setVit.nextInt();
 			if (setVitOfPlayer <= totalOfStats)
@@ -36,7 +36,7 @@ public class CreatePlayer
 				}
 			else
 				{
-				System.out.println("Pick a number less than " + totalOfStats);
+				System.out.println("Pick a number less than or equal to " + totalOfStats + ".");
 				checkStatIn = false;
 				}
 			}
@@ -44,7 +44,7 @@ public class CreatePlayer
 		checkStatIn = true;
 		do
 			{
-			System.out.println("How many points do you want in Str");
+			System.out.println("How many points do you want in Str?");
 			Scanner setStr = new Scanner(System.in);
 			setStrOfPlayer = setStr.nextInt();
 			if (setStrOfPlayer <= totalOfStats)
@@ -55,7 +55,7 @@ public class CreatePlayer
 				}
 			else
 				{
-				System.out.println("Pick a number less than " + totalOfStats);
+				System.out.println("Pick a number less than or equal to " + totalOfStats + ".");
 				checkStatIn = false;
 				}
 			}
@@ -63,7 +63,7 @@ public class CreatePlayer
 		checkStatIn = true;
 		do
 			{
-			System.out.println("How many points do you want in Dxt");
+			System.out.println("How many points do you want in Dxt?");
 			Scanner setDxt = new Scanner(System.in);
 			setDxtOfPlayer = setDxt.nextInt();
 			if (setDxtOfPlayer <= totalOfStats)
@@ -74,7 +74,7 @@ public class CreatePlayer
 				}
 			else
 				{
-				System.out.println("Pick a number less than " + totalOfStats);
+				System.out.println("Pick a number less than or equal to " + totalOfStats + ".");
 				checkStatIn = false;
 				}
 			}
@@ -82,7 +82,7 @@ public class CreatePlayer
 		checkStatIn = true;
 		do
 			{
-			System.out.println("How many points do you want in Int");
+			System.out.println("How many points do you want in Int?");
 			Scanner setInt = new Scanner(System.in);
 			setIntOfPlayer = setInt.nextInt();
 			if (setIntOfPlayer <= totalOfStats)
@@ -93,7 +93,7 @@ public class CreatePlayer
 				}
 			else
 				{
-				System.out.println("Pick a number less than " + totalOfStats);
+				System.out.println("Pick a number less than or equal to " + totalOfStats + ".");
 				checkStatIn = false;
 				}
 			}
