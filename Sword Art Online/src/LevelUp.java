@@ -5,10 +5,10 @@ public class LevelUp
 	{
 	private static Player player = PlayGame.player;
 	private static int setHPOfPlayer;
-	private static int setVitOfPlayer = player.getPlayerVit();
-	private static int setStrOfPlayer = player.getPlayerStr();
-	private static int setDxtOfPlayer = player.getPlayerDxt();
-	private static int setIntOfPlayer = player.getPlayerInt();
+	private static int setVitOfPlayer;
+	private static int setStrOfPlayer;
+	private static int setDxtOfPlayer;
+	private static int setIntOfPlayer;
 	private static int totalOfStats = 3;
 	private static boolean checkStatIn;
 	public static void assignStats()
@@ -16,12 +16,13 @@ public class LevelUp
 		checkStatIn = true;
 		do
 			{
+			System.out.println("You now have three stat points.");
 			System.out.println("How many points do you want in Vit?");
 			Scanner setVit = new Scanner(System.in);
 			setVitOfPlayer = setVit.nextInt();
 			if (setVitOfPlayer <= totalOfStats)
 				{
-				player.setPlayerVit(setVitOfPlayer + 1);
+				player.setPlayerVit(player.getPlayerVit() + setVitOfPlayer);
 				totalOfStats = totalOfStats-setVitOfPlayer;
 				checkStatIn = true;
 				}
@@ -40,7 +41,7 @@ public class LevelUp
 			setStrOfPlayer = setStr.nextInt();
 			if (setStrOfPlayer <= totalOfStats)
 				{
-				player.setPlayerStr(setStrOfPlayer + 1);
+				player.setPlayerStr(player.getPlayerStr() + setStrOfPlayer);
 				totalOfStats = totalOfStats-setStrOfPlayer;
 				checkStatIn = true;
 				}
@@ -59,7 +60,7 @@ public class LevelUp
 			setDxtOfPlayer = setDxt.nextInt();
 			if (setDxtOfPlayer <= totalOfStats)
 				{
-				player.setPlayerDxt(setDxtOfPlayer + 1);
+				player.setPlayerDxt(player.getPlayerDxt() + setDxtOfPlayer);
 				totalOfStats = totalOfStats-setDxtOfPlayer;
 				checkStatIn = true;
 				}
@@ -78,7 +79,7 @@ public class LevelUp
 			setIntOfPlayer = setInt.nextInt();
 			if (setIntOfPlayer <= totalOfStats)
 				{
-				player.setPlayerInt(setIntOfPlayer + 1);
+				player.setPlayerInt(player.getPlayerVit() + setIntOfPlayer);
 				totalOfStats = totalOfStats-setIntOfPlayer;
 				checkStatIn = true;
 				}
@@ -89,7 +90,7 @@ public class LevelUp
 				}
 			}
 		while(checkStatIn == false);
-		setHPOfPlayer = setVitOfPlayer*50;
+		setHPOfPlayer = player.getPlayerVit()*50;
 		player.setPlayerHP(setHPOfPlayer);
 		}
 	}

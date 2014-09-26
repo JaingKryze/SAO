@@ -98,7 +98,7 @@ public class CreatePlayer
 				}
 			}
 		while(checkStatIn == false);
-		setHPOfPlayer = setVitOfPlayer*50;
+		setHPOfPlayer = setVitOfPlayer*50 + 50;
 		player.setPlayerHP(setHPOfPlayer);
 		player.setPlayerLevel(1);
 		player.setPlayerXp(0);

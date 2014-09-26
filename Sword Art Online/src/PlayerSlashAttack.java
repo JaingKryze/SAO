@@ -8,7 +8,7 @@ public class PlayerSlashAttack implements AttackBehavior
 		int critMult = 1;
 		int roll = (int) (Math.random()*5);
 		int critChanceRoll = (int) (Math.random()*100)+1;
-		if ((critChanceRoll <= player.getPlayerInt()))
+		if ((critChanceRoll <= player.getPlayerInt()*5))
 			{
 			critMult = 2;
 			System.out.println("Critical hit! Double damage.");
@@ -17,7 +17,7 @@ public class PlayerSlashAttack implements AttackBehavior
 			{
 			critMult = 1;
 			}
-		damageValue = (1*player.getPlayerStr()*critMult+roll);
+		damageValue = ((int)3*player.getPlayerStr()*critMult+roll);
 		return damageValue;
 		}
 	}

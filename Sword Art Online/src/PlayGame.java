@@ -122,7 +122,7 @@ public class PlayGame
 				}
 			hosMob.setMobHP(hosMob.getMobHP() - hero.performAttack());
 			System.out.println("The " + hosMob.getMobName() + "'s HP is " + hosMob.getMobHP() + ".");
-			if((hero.getPlayerDxt()/2)>=hosMob.getMobSpeed())
+			if(((double)hero.getPlayerDxt()/2)>=hosMob.getMobSpeed())
 				{
 				System.out.println("Your speed is greater than double the speed of " + hosMob.getMobName() + ". You get an extra attack!");
 				hosMob.setMobHP(hosMob.getMobHP() - hero.performAttack());
@@ -130,7 +130,7 @@ public class PlayGame
 				}
 			hero.setPlayerHP(hero.getPlayerHP() - hosMob.performAttack());
 			System.out.println(hero.getName() + "'s HP is " + hero.getPlayerHP() + ".");
-			if((hosMob.getMobSpeed()/2)>=hero.getPlayerDxt())
+			if(((double)hosMob.getMobSpeed()/2)>=hero.getPlayerDxt())
 				{
 				System.out.println(hosMob.getMobName() + "'s speed is greater than double " + hero.getName() + "'s. " + hosMob.getMobName() + " gets an extra attack!");
 				hero.setPlayerHP(hero.getPlayerHP() - hosMob.performAttack());
