@@ -1,6 +1,7 @@
-
+import java.util.Scanner;
 public class Player
 	{
+	private Item[] inventory = new Item[30];
 	AttackBehavior playerAttackBehavior;
 	private  String name;
 	private  int playerHP;
@@ -11,6 +12,41 @@ public class Player
 	private  int playerXp;
 	private  int playerLevel;
 	private  int playerXpNeeded;
+	public void displayInventory()
+		{
+		//need to add a item display method to the Items classes
+		}
+	public void addItem(Item item)
+		{
+		for(int i = 0; i < 29; i++)
+			{
+			if (inventory[i] == (null))
+				{
+				inventory[i] = item;
+				return;
+				}
+			}
+		System.out.println("Invetory is full please pick an item to delete");
+		displayInventory();
+		Scanner SelectItem = new Scanner(System.in);
+		int itemNumber = SelectItem.nextInt();
+		deleteItem(itemNumber);
+		addItem(item);
+		}
+	public void deleteItem(int location)
+		{
+		inventory[location-1] = null;
+		}
+	
+	
+	public Item[] getInventory()
+		{
+		return inventory;
+		}
+	public void setInventory(Item[] inventory)
+		{
+		this.inventory = inventory;
+		}
 	public  int getPlayerXp()
 		{
 		return playerXp;
