@@ -2,6 +2,8 @@ import java.util.Scanner;
 public class Player
 	{
 	private Item[] inventory = new Item[30];
+	private Weapon playerWeapon;
+	private Armor playerArmor;
 	AttackBehavior playerAttackBehavior;
 	private  String name;
 	private  int playerHP;
@@ -39,6 +41,23 @@ public class Player
 		}
 	
 	
+	
+	public Weapon getPlayerWeapon()
+		{
+		return playerWeapon;
+		}
+	public void setPlayerWeapon(Weapon playerWeapon)
+		{
+		this.playerWeapon = playerWeapon;
+		}
+	public Armor getPlayerArmor()
+		{
+		return playerArmor;
+		}
+	public void setPlayerArmor(Armor playerArmor)
+		{
+		this.playerArmor = playerArmor;
+		}
 	public Item[] getInventory()
 		{
 		return inventory;
