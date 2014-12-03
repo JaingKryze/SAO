@@ -5,7 +5,7 @@ public abstract class Item
 	protected String name;
 	protected int price;
 	protected double rarity;
-	protected AbilityBehvaior itemAbilityBehvaior = new noAbility();
+	protected AbilityBehavior itemAbilityBehavior = new noAbility();
 	public int sellItem()
 		{
 		//remove item from inventory
@@ -52,12 +52,12 @@ public abstract class Item
 		{
 		this.rarity = rarity;
 		}
-	public AbilityBehvaior getItemAbilityBehvaior()
+	public AbilityBehavior getItemAbilityBehavior()
 		{
-		return itemAbilityBehvaior;
+		return itemAbilityBehavior;
 		}
-	public void setItemAbilityBehvaior(AbilityBehvaior itemAbilityBehvaior)
+	public void setItemAbilityBehavior(AbilityBehavior itemAbilityBehavior)
 		{
-		this.itemAbilityBehvaior = itemAbilityBehvaior;
+		this.itemAbilityBehavior = itemAbilityBehavior;
 		}
 	}

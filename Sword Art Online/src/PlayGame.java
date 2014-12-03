@@ -91,7 +91,7 @@ public class PlayGame
 		map [0].currentMob = new Slime();
 		map [1].currentMob = new Skeleton();
 		map [2].currentMob = new Skeleton();
-		map [3].currentMob = new Skeleton();
+		map [3].currentMob = new Jormungandr();
 		}
 	// hos short for hostile
 	public static void battle(Player hero, Mob hosMob)

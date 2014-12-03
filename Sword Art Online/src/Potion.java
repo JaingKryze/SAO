@@ -5,6 +5,20 @@ public class Potion extends Item
 		{
 		type = "potion";
 		}
+	public Potion(String n, int p, int hp, int r)
+		{
+		name = n;
+		type = "potion";
+		price = p;
+		hpRestore = hp;
+		rarity = r;
+		}
+	public int getHpRestore() {
+		return hpRestore;
+	}
+	public void setHpRestore(int hpRestore) {
+		this.hpRestore = hpRestore;
+	}
 	protected int hpRestore;
 	@Override
 	public void useItem()

@@ -20,4 +20,12 @@ public class Weapon extends Item
 		
 		}
 
+	public int getAtk() {
+		return atk;
+	}
+
+	public void setAtk(int atk) {
+		this.atk = atk;
+	}
+
 	}
